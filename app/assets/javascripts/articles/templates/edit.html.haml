@@ -1,0 +1,4 @@
+.col-md-10
+  %form#first.tab-pane.active.form-horizontal{:name => "articleForm", "ng-submit" => "update()", :novalidate => ""}
+    %h3.block Edit article
+    %div{"ng-include" => "", :src => "'articles/templates/_form.html'"}

@@ -1,0 +1,21 @@
+%br/
+.row
+  .col-md-10
+    %a.btn.btn-primary{:href => "#/articles/new"} Create a article
+    %h3.block Articles
+    %table.table.table-striped
+      %tr
+        %th Title
+        %th Body
+        %th Author
+        %th
+      %tr{"ng-hide" => "articles.length"}
+        %td{:colspan => "5"} No articles found, Please create one.
+      %tr{"ng-repeat" => "article in articles", "ng-show" => "articles.length"}
+        %td {{article.title}}
+        %td {{article.body}}
+        %td {{article.author}}
+        %td
+          %a{:href => "#/articles/{{article.id}}/edit"} Edit
+          |
+          %a{:href => "", "ng-click" => "deleteArticle(article.id)"} Remove

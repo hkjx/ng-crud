@@ -1,0 +1,22 @@
+.form-group
+  %label.control-label.col-md-3
+    Title
+    %span.required *
+  .col-md-4
+    %input.form-control{:name => "title", "ng-model" => "article.title", :type => "text"}>
+.form-group
+  %label.control-label.col-md-3
+    Body
+    %span.required *
+  .col-md-4
+    %input.form-control{:name => "body", "ng-model" => "article.body", :type => "text"}>
+.form-group
+  %label.control-label.col-md-3
+    Author
+    %span.required *
+  .col-md-4
+    %input.form-control{:name => "author", "ng-model" => "article.author", :type => "text"}>
+.form-group
+  .pull-left
+    %a.btn.btn-default{:href => "/articles"} Back
+    %button.btn.btn-primary{"ng-click" => "submitted=true", :type => "submit"} Submit
