@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
+  before_filter :authenticate_user!, only: [:create, :update, :show]
   before_filter :set_article, except: [:index, :create]
-   respond_to :json
   
   def index
     render json: Article.all.as_json

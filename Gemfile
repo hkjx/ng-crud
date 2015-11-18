@@ -18,6 +18,8 @@ gem 'haml'
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
 gem 'responders', '~> 2.0'
+gem 'adauth'
+gem 'devise'
 # gem 'sprockets', '2.12.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
